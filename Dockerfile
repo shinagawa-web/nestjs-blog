@@ -9,14 +9,17 @@ COPY frontend/package*.json frontend/
 
 # frontendビルド
 WORKDIR /app/frontend
+COPY frontend/ .
 RUN npm install
 RUN npm run build
 
 # backendビルド
 WORKDIR /app/backend
+COPY backend/ .
 RUN npm install
-COPY backend .
 RUN npm run build
+
+RUN npx prisma generate
 
 # 実行ステージ
 FROM node:20-slim
