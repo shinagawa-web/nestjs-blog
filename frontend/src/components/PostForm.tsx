@@ -27,7 +27,7 @@ export function PostForm({ onPostCreated }: Props) {
       onSubmit={handleSubmit}
       className="bg-white p-8 rounded shadow-md space-y-4 w-full max-w-md"
     >
-      <h1 className="text-2xl font-bold text-blue-700">新規記事投稿</h1>
+      <h1 className="text-2xl font-bold text-blue-700">記事投稿</h1>
       <div>
         <label className="block text-sm font-medium text-gray-700">タイトル</label>
         <input
